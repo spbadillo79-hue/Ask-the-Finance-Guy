@@ -12,7 +12,9 @@ module.exports = async function handler(req, res) {
     const label = plan === 'review' ? 'Detailed automotive deal review' : 'Automotive finance question';
     const origin = `https://${req.headers.host}`;
     const session = await stripe.checkout.sessions.create({
-      mode: 'payment', customer_email: email,
+      mode: 'payment',
+      managed_payments:{enabled:false},
+      customer_email: email,
       line_items: [{ price_data: { currency: 'usd', unit_amount: amount, product_data: { name: label, tax_code: 'txcd_20030000'} }, quantity: 1 }],
       metadata: { name: String(name).slice(0, 200), email: String(email).slice(0, 200), question: String(question).slice(0, 450), plan },
       success_url: `${origin}/?paid=1`, cancel_url: `${origin}/?canceled=1`
