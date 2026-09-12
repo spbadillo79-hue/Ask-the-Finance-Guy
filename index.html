@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Independent automotive purchase and paperwork review from an experienced finance professional.">
+  <title>Ask the Finance Guy</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b1527'/%3E%3Cpath d='M18 39h28l-3-10H21zM22 39v7m20-7v7M25 46h-5m24 0h-5' fill='none' stroke='%23f5b642' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <style>
+    :root{--navy:#071326;--card:#11213a;--gold:#f4b942;--text:#f7f9fc;--muted:#b7c2d5;--line:#2b3d59}
+    *{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at top right,#17365b 0,var(--navy) 42%);color:var(--text);font:16px/1.55 system-ui,-apple-system,Segoe UI,sans-serif;min-height:100vh}.wrap{width:min(1060px,calc(100% - 32px));margin:auto}.top{padding:24px 0;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #ffffff1f}.brand{font-size:1.1rem;font-weight:800}.brand span{color:var(--gold)}.trust{color:var(--muted);font-size:.9rem}main{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;padding:64px 0 48px;align-items:start}.eyebrow{color:var(--gold);font-weight:800;text-transform:uppercase;letter-spacing:.12em;font-size:.78rem}h1{font-size:clamp(2.5rem,7vw,5.3rem);line-height:.96;letter-spacing:-.055em;margin:.35em 0 .3em;max-width:700px}h1 em{font-style:normal;color:var(--gold)}.lead{font-size:1.15rem;color:var(--muted);max-width:650px}.points{display:grid;gap:14px;margin:30px 0}.point{display:flex;gap:12px}.check{color:var(--gold);font-weight:900}.experience{border-left:3px solid var(--gold);padding-left:15px;font-weight:700}.card{background:linear-gradient(145deg,#152944,#0d1b30);border:1px solid var(--line);border-radius:22px;padding:28px;box-shadow:0 24px 70px #0007}.card h2{margin:0 0 4px;font-size:1.55rem}.card p{color:var(--muted);margin-top:0}label{display:block;font-weight:700;font-size:.9rem;margin:16px 0 6px}input,textarea,select{width:100%;background:#081528;color:white;border:1px solid #3b4c67;border-radius:10px;padding:12px;font:inherit}textarea{min-height:115px;resize:vertical}input:focus,textarea:focus,select:focus{outline:2px solid var(--gold);outline-offset:1px}.plans{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}.plan{border:1px solid #3b4c67;border-radius:12px;padding:12px;cursor:pointer}.plan:has(input:checked){border-color:var(--gold);background:#f4b94214}.plan input{width:auto;margin-right:5px}.price{display:block;font-size:1.25rem;font-weight:900;color:var(--gold)}button{width:100%;margin-top:20px;border:0;border-radius:11px;padding:14px;background:var(--gold);color:#14100a;font-weight:900;font-size:1rem;cursor:pointer}button:disabled{opacity:.6;cursor:wait}.fine{font-size:.76rem!important;margin:12px 0 0!important;text-align:center}footer{padding:24px 0 40px;color:var(--muted);border-top:1px solid #ffffff1f;font-size:.82rem}@media(max-width:780px){main{grid-template-columns:1fr;padding-top:42px;gap:30px}.trust{display:none}.card{padding:22px}.plans{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header class="wrap top"><div class="brand">ASK THE <span>FINANCE GUY</span></div><div class="trust">Independent automotive guidance</div></header>
+  <main class="wrap">
+    <section>
+      <div class="eyebrow">Before you sign—or after you buy</div>
+      <h1>Make the deal your <em>best deal.</em></h1>
+      <p class="lead">Get an independent review of vehicle pricing, financing, mystery fees, interest-rate markups, and protection products—without dealership pressure.</p>
+      <div class="points">
+        <div class="point"><span class="check">✓</span><span>Let us help with the negotiation and explain the numbers.</span></div>
+        <div class="point"><span class="check">✓</span><span>Make your challenged credit our challenge.</span></div>
+        <div class="point"><span class="check">✓</span><span>Already purchased? We can review your paperwork for costly surprises.</span></div>
+      </div>
+      <p class="experience">Over 20 years of experience in the automobile business.</p>
+    </section>
+    <form class="card" id="question-form">
+      <h2>Ask your question</h2>
+      <p>Choose a review, tell us what happened, and continue to secure payment.</p>
+      <label for="name">Your name</label><input id="name" name="name" required autocomplete="name">
+      <label for="email">Email address</label><input id="email" name="email" type="email" required autocomplete="email">
+      <label for="question">What would you like reviewed?</label><textarea id="question" name="question" required placeholder="Tell us about the vehicle, price, financing, fees, or paperwork..."></textarea>
+      <div class="plans">
+        <label class="plan"><input type="radio" name="plan" value="question" checked><span>Quick question</span><strong class="price">$19.99</strong></label>
+        <label class="plan"><input type="radio" name="plan" value="review"><span>Detailed review</span><strong class="price">$39.99</strong></label>
+      </div>
+      <button id="submit" type="submit">Continue to secure payment</button>
+      <p class="fine" id="status">Payments are securely processed by Stripe.</p>
+    </form>
+  </main>
+  <footer><div class="wrap">Educational and informational service only. This is not legal advice, a legal opinion, or a guarantee of financing or savings.</div></footer>
+  <script>
+    const form=document.getElementById('question-form'),button=document.getElementById('submit'),status=document.getElementById('status');
+    form.addEventListener('submit',async(e)=>{e.preventDefault();button.disabled=true;button.textContent='Opening secure checkout…';status.textContent='Please wait.';
+      try{const data=Object.fromEntries(new FormData(form));const response=await fetch('/api/create-checkout',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});const result=await response.json();if(!response.ok)throw new Error(result.error||'Unable to start checkout.');window.location.href=result.url}
+      catch(error){status.textContent=error.message;button.disabled=false;button.textContent='Continue to secure payment'}});
+  </script>
+</body>
+</html>
