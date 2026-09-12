@@ -6,31 +6,30 @@ module.exports = async function handler(req, res) {
   }
 
   try {
-    const { name, email, question, plan } = req.body || {};
+    const body = typeof req.body === 'string' ? JSON.parse(req.body) : (req.body || {});
+    const { name, email, question = '', plan } = body;
 
     if (!name || !email || !plan) {
-      return res.status(400).json({ error: 'Please complete every field.' });
+      return res.status(400).json({ error: 'Please enter your name and email.' });
     }
 
-    if (plan !== 'training' && !question) {
-      return res.status(400).json({ error: 'Please complete every field.' });
+    const prices = {
+      question: 1999,
+      review: 3999,
+      training: 39900
+    };
+
+    const labels = {
+      question: 'Automotive Finance Question',
+      review: 'Detailed Automotive Deal Review',
+      training: "The New Era Finance Manager — Founder's Edition"
+    };
+
+    if (!prices[plan]) {
+      return res.status(400).json({ error: 'Invalid purchase option.' });
     }
 
     const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
-
-    let amount;
-    let label;
-
-    if (plan === 'training') {
-      amount = 39900;
-      label = "The New Era Finance Manager — Founder's Edition";
-    } else if (plan === 'review') {
-      amount = 3999;
-      label = 'Detailed Deal Review';
-    } else {
-      amount = 1999;
-      label = 'Quick Question';
-    }
 
     const origin = `https://${req.headers.host}`;
 
@@ -41,27 +40,29 @@ module.exports = async function handler(req, res) {
         {
           price_data: {
             currency: 'usd',
+            unit_amount: prices[plan],
             product_data: {
-              name: label,
-            },
-            unit_amount: amount,
+              name: labels[plan]
+            }
           },
-          quantity: 1,
-        },
+          quantity: 1
+        }
       ],
       metadata: {
-        name: String(name).slice(0, 500),
-        email: String(email).slice(0, 500),
-        question: String(question || '').slice(0, 500),
-        plan: String(plan).slice(0, 100),
+        name: String(name).slice(0, 200),
+        email: String(email).slice(0, 200),
+        question: String(question).slice(0, 450),
+        plan: String(plan)
       },
       success_url: `${origin}/?paid=1`,
-      cancel_url: `${origin}/`,
+      cancel_url: `${origin}/?canceled=1`
     });
 
     return res.status(200).json({ url: session.url });
   } catch (error) {
-    console.error(error);
-    return res.status(500).json({ error: 'Checkout could not be started.' });
+    console.error('CHECKOUT ERROR:', error);
+    return res.status(500).json({
+      error: error.message || 'Checkout could not be started.'
+    });
   }
 };
