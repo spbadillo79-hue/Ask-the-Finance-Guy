@@ -34,7 +34,8 @@ module.exports = async function handler(req, res) {
     const origin = `https://${req.headers.host}`;
 
     const session = await stripe.checkout.sessions.create({
-      mode: 'payment',
+  mode: 'payment',
+  managed_payments: { enabled: false },
       customer_email: email,
       line_items: [
         {
