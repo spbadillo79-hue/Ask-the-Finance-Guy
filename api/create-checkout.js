@@ -1,27 +1,67 @@
 const Stripe = require('stripe');
 
 module.exports = async function handler(req, res) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' });
+  }
+
   try {
     const { name, email, question, plan } = req.body || {};
-    if (!name || !email || !question || !['question', 'review'].includes(plan)) {
+
+    if (!name || !email || !plan) {
       return res.status(400).json({ error: 'Please complete every field.' });
     }
+
+    if (plan !== 'training' && !question) {
+      return res.status(400).json({ error: 'Please complete every field.' });
+    }
+
     const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
-    const amount = plan === 'review' ? 3999 : 1999;
-    const label = plan === 'review' ? 'Detailed automotive deal review' : 'Automotive finance question';
+
+    let amount;
+    let label;
+
+    if (plan === 'training') {
+      amount = 39900;
+      label = "The New Era Finance Manager — Founder's Edition";
+    } else if (plan === 'review') {
+      amount = 3999;
+      label = 'Detailed Deal Review';
+    } else {
+      amount = 1999;
+      label = 'Quick Question';
+    }
+
     const origin = `https://${req.headers.host}`;
+
     const session = await stripe.checkout.sessions.create({
       mode: 'payment',
-      managed_payments:{enabled:false},
       customer_email: email,
-      line_items: [{ price_data: { currency: 'usd', unit_amount: amount, product_data: { name: label, tax_code: 'txcd_20030000'} }, quantity: 1 }],
-      metadata: { name: String(name).slice(0, 200), email: String(email).slice(0, 200), question: String(question).slice(0, 450), plan },
-      success_url: `${origin}/?paid=1`, cancel_url: `${origin}/?canceled=1`
+      line_items: [
+        {
+          price_data: {
+            currency: 'usd',
+            product_data: {
+              name: label,
+            },
+            unit_amount: amount,
+          },
+          quantity: 1,
+        },
+      ],
+      metadata: {
+        name: String(name).slice(0, 500),
+        email: String(email).slice(0, 500),
+        question: String(question || '').slice(0, 500),
+        plan: String(plan).slice(0, 100),
+      },
+      success_url: `${origin}/?paid=1`,
+      cancel_url: `${origin}/`,
     });
+
     return res.status(200).json({ url: session.url });
   } catch (error) {
     console.error(error);
-    return res.status(500).json({ error: 'Checkout is temporarily unavailable.' });
+    return res.status(500).json({ error: 'Checkout could not be started.' });
   }
 };
