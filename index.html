@@ -1,100 +1,728 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Independent automotive purchase and paperwork review from an experienced finance professional.">
-  <title>Ask the Finance Guy</title>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b1527'/%3E%3Cpath d='M18 39h28l-3-10H21zM22 39v7m20-7v7M25 46h-5m24 0h-5' fill='none' stroke='%23f5b642' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
-  <style>
-    :root{--navy:#071326;--card:#11213a;--gold:#f4b942;--text:#f7f9fc;--muted:#b7c2d5;--line:#2b3d59}
-    *{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at top right,#17365b 0,var(--navy) 42%);color:var(--text);font:16px/1.55 system-ui,-apple-system,Segoe UI,sans-serif;min-height:100vh}.wrap{width:min(1060px,calc(100% - 32px));margin:auto}.top{padding:24px 0;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #ffffff1f}.brand{font-size:1.1rem;font-weight:800}.brand span{color:var(--gold)}.trust{color:var(--muted);font-size:.9rem}.nav{display:flex;gap:16px;align-items:center}.nav a{color:var(--text);text-decoration:none;font-weight:700;font-size:.9rem}.nav a:hover{color:var(--gold)}main{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;padding:64px 0 48px;align-items:start}.eyebrow{color:var(--gold);font-weight:800;text-transform:uppercase;letter-spacing:.12em;font-size:.78rem}h1{font-size:clamp(2.5rem,7vw,5.3rem);line-height:.96;letter-spacing:-.055em;margin:.35em 0 .3em;max-width:700px}h1 em{font-style:normal;color:var(--gold)}.lead{font-size:1.15rem;color:var(--muted);max-width:650px}.points{display:grid;gap:14px;margin:30px 0}.point{display:flex;gap:12px}.check{color:var(--gold);font-weight:900}.experience{border-left:3px solid var(--gold);padding-left:15px;font-weight:700}.card{background:linear-gradient(145deg,#152944,#0d1b30);border:1px solid var(--line);border-radius:22px;padding:28px;box-shadow:0 24px 70px #0007}.card h2{margin:0 0 4px;font-size:1.55rem}.card p{color:var(--muted);margin-top:0}label{display:block;font-weight:700;font-size:.9rem;margin:16px 0 6px}input,textarea,select{width:100%;background:#081528;color:white;border:1px solid #3b4c67;border-radius:10px;padding:12px;font:inherit}textarea{min-height:115px;resize:vertical}input:focus,textarea:focus,select:focus{outline:2px solid var(--gold);outline-offset:1px}.plans{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}.plan{border:1px solid #3b4c67;border-radius:12px;padding:12px;cursor:pointer}.plan:has(input:checked){border-color:var(--gold);background:#f4b94214}.plan input{width:auto;margin-right:5px}.price{display:block;font-size:1.25rem;font-weight:900;color:var(--gold)}button{width:100%;margin-top:20px;border:0;border-radius:11px;padding:14px;background:var(--gold);color:#14100a;font-weight:900;font-size:1rem;cursor:pointer}button:disabled{opacity:.6;cursor:wait}.fine{font-size:.76rem!important;margin:12px 0 0!important;text-align:center}.training{padding:64px 0;border-top:1px solid #ffffff1f}.training-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:start}.training h2{font-size:clamp(2rem,5vw,3.6rem);line-height:1.02;margin:.25em 0}.training .sub{color:var(--muted);font-size:1.08rem}.curriculum{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:24px 0}.module{padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:#0d1b30}.badge{display:inline-block;background:#f4b9421c;border:1px solid #f4b94266;color:var(--gold);padding:5px 9px;border-radius:999px;font-size:.78rem;font-weight:800}.training-card{background:linear-gradient(145deg,#152944,#0d1b30);border:1px solid var(--line);border-radius:22px;padding:26px}.training-card .price{font-size:2rem}.training-card ul{padding-left:20px;color:var(--muted)}.training-card a.cta{display:block;text-align:center;text-decoration:none;margin-top:18px;border-radius:11px;padding:14px;background:var(--gold);color:#14100a;font-weight:900}.mini{font-size:.78rem;color:var(--muted)}footer{padding:24px 0 40px;color:var(--muted);border-top:1px solid #ffffff1f;font-size:.82rem}@media(max-width:780px){main,.training-grid{grid-template-columns:1fr;padding-top:42px;gap:30px}.trust{display:none}.nav{gap:10px}.nav a{font-size:.8rem}.card{padding:22px}.plans,.curriculum{grid-template-columns:1fr}}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ask The Finance Guy — Car Buying & Finance Answers</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;900&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#EDE7D9;
+    --paper-2:#E3DCC9;
+    --ink:#1C1D1B;
+    --navy:#26364A;
+    --amber:#C97A1F;
+    --amber-dark:#9C5E15;
+    --line: rgba(28,29,27,0.18);
+    --green:#3C5B41;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter', sans-serif;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1080px; margin:0 auto; padding:0 28px;}
+  h1,h2,h3{
+    font-family:'Big Shoulders Display', sans-serif;
+    font-weight:900;
+    letter-spacing:0.01em;
+    line-height:0.95;
+  }
+  .mono{font-family:'IBM Plex Mono', monospace;}
+  a{color:inherit;}
+
+  header{
+    border-bottom:2px solid var(--ink);
+    background:var(--paper);
+    position:sticky; top:0; z-index:50;
+  }
+  .topbar{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:16px 28px;
+  }
+  .brand{
+    font-family:'Big Shoulders Display', sans-serif;
+    font-weight:900;
+    font-size:22px;
+    display:flex; align-items:center; gap:10px;
+  }
+  .brand .dot{
+    width:10px; height:10px; border-radius:50%;
+    background:var(--amber);
+    display:inline-block;
+  }
+  nav a{
+    font-size:14px; font-weight:500; text-decoration:none;
+    margin-left:26px; color:var(--ink);
+    border-bottom:1px solid transparent;
+  }
+  nav a:hover{border-bottom-color:var(--ink);}
+  .nav-cta{
+    background:var(--ink); color:var(--paper);
+    padding:9px 16px; border-radius:2px;
+    font-weight:600;
+  }
+  .nav-cta:hover{background:var(--amber-dark);}
+
+  .hero{
+    padding:72px 0 56px;
+    border-bottom:2px solid var(--ink);
+  }
+  .hero-grid{
+    display:grid; grid-template-columns: 1.3fr 1fr; gap:48px; align-items:end;
+  }
+  .kicker{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px;
+    color:var(--navy);
+    border:1px solid var(--navy);
+    display:inline-block;
+    padding:4px 10px;
+    margin-bottom:22px;
+    letter-spacing:0.03em;
+  }
+  .hero h1{
+    font-size:clamp(44px, 6vw, 76px);
+    max-width:11.5ch;
+  }
+  .hero p.lede{
+    font-size:19px;
+    max-width:46ch;
+    margin-top:20px;
+    color:#33342f;
+  }
+  .hero-questions{
+    list-style:none;
+    margin:20px 0 22px;
+  }
+  .hero-questions li{
+    font-size:19px;
+    font-weight:600;
+    padding:10px 0 10px 28px;
+    position:relative;
+    border-top:1px solid var(--line);
+  }
+  .hero-questions li:first-child{ border-top:none; }
+  .hero-questions li:before{
+    content:"?";
+    position:absolute; left:0; top:9px;
+    font-family:'IBM Plex Mono', monospace;
+    color:var(--amber-dark);
+    font-weight:700;
+  }
+  .hero-actions{ margin-top:32px; display:flex; gap:14px; flex-wrap:wrap;}
+  .btn{
+    display:inline-block;
+    padding:14px 24px;
+    font-weight:600;
+    font-size:15px;
+    border-radius:2px;
+    text-decoration:none;
+    border:2px solid var(--ink);
+    cursor:pointer;
+  }
+  .btn-primary{ background:var(--ink); color:var(--paper); }
+  .btn-primary:hover{ background:var(--amber-dark); border-color:var(--amber-dark);}
+  .btn-ghost{ background:transparent; color:var(--ink); }
+  .btn-ghost:hover{ background:var(--paper-2); }
+
+  .sticker{
+    border:2px solid var(--ink);
+    background:#fff;
+    padding:0;
+  }
+  .sticker-head{
+    background:var(--ink); color:var(--paper);
+    padding:10px 16px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    display:flex; justify-content:space-between;
+    letter-spacing:0.04em;
+  }
+  .sticker-row{
+    display:flex; justify-content:space-between;
+    padding:11px 16px;
+    border-bottom:1px solid var(--line);
+    font-size:14px;
+  }
+  .sticker-row:last-child{border-bottom:none;}
+  .sticker-row .label{color:#5b5c56;}
+  .sticker-row .val{font-family:'IBM Plex Mono', monospace; font-weight:500;}
+  .sticker-total{
+    display:flex; justify-content:space-between;
+    padding:14px 16px;
+    background:var(--paper-2);
+    font-weight:700;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:15px;
+  }
+
+  .strip{
+    border-bottom:2px solid var(--ink);
+    padding:18px 0;
+  }
+  .strip .wrap{
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px 28px;
+  }
+  .strip-item{
+    font-size:13px; font-family:'IBM Plex Mono', monospace;
+    color:var(--navy);
+  }
+
+  section{ padding:64px 0; border-bottom:2px solid var(--ink); }
+  section:last-of-type{border-bottom:none;}
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px; color:var(--amber-dark);
+    margin-bottom:10px;
+  }
+  .section-title{ font-size:clamp(30px,4vw,44px); max-width:16ch; margin-bottom:14px;}
+  .section-sub{ max-width:56ch; color:#33342f; font-size:16px;}
+
+  .steps{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:0;
+    margin-top:40px;
+    border:2px solid var(--ink);
+  }
+  .step{
+    padding:28px 24px;
+    border-right:2px solid var(--ink);
+  }
+  .step:last-child{border-right:none;}
+  .step .num{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px; color:var(--amber-dark); font-weight:600;
+  }
+  .step h3{
+    font-size:24px; margin:10px 0 8px; font-weight:700;
+  }
+  .step p{ font-size:14.5px; color:#33342f;}
+
+  .pricing-grid{
+    display:grid; grid-template-columns:1fr 1fr; gap:24px;
+    margin-top:40px;
+  }
+  .price-card{
+    border:2px solid var(--ink);
+    background:#fff;
+    display:flex; flex-direction:column;
+  }
+  .price-card .ph{
+    background:var(--navy); color:var(--paper);
+    padding:16px 20px;
+  }
+  .price-card.feat .ph{ background:var(--amber-dark); }
+  .price-card .ph .tag{
+    font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:0.04em;
+    opacity:0.85;
+  }
+  .price-card .ph h3{ font-size:26px; margin-top:6px; color:#fff;}
+  .price-body{ padding:22px 20px; flex:1; display:flex; flex-direction:column;}
+  .amount{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:44px; font-weight:600;
+    display:flex; align-items:baseline; gap:6px;
+  }
+  .amount .per{ font-size:14px; color:#5b5c56; font-weight:400;}
+  .price-list{ margin:18px 0 22px; font-size:14.5px;}
+  .price-list li{
+    list-style:none;
+    padding:8px 0;
+    border-top:1px solid var(--line);
+    display:flex; gap:10px;
+  }
+  .price-list li:first-child{border-top:none;}
+  .price-list .mk{ color:var(--green); font-weight:700;}
+  .price-card .btn{ margin-top:auto; text-align:center; width:100%;}
+
+  .form-wrap{
+    display:grid; grid-template-columns:0.9fr 1.1fr; gap:48px;
+    margin-top:36px;
+  }
+  .form-card{
+    border:2px solid var(--ink);
+    background:#fff;
+    padding:28px;
+  }
+  .field{ margin-bottom:18px; }
+  .field label{
+    display:block; font-size:13px; font-family:'IBM Plex Mono', monospace;
+    color:var(--navy); margin-bottom:6px;
+  }
+  .field input, .field select, .field textarea{
+    width:100%;
+    padding:11px 12px;
+    border:1.5px solid var(--ink);
+    background:var(--paper);
+    font-family:'Inter', sans-serif;
+    font-size:14.5px;
+    border-radius:2px;
+  }
+  .field textarea{ min-height:100px; resize:vertical; }
+  .field-row{ display:grid; grid-template-columns:1fr 1fr; gap:14px;}
+  .plan-toggle{ display:flex; gap:10px; margin-bottom:20px;}
+  .plan-opt{
+    flex:1; border:1.5px solid var(--ink); padding:12px; border-radius:2px;
+    cursor:pointer; text-align:center; font-size:13.5px; font-weight:600;
+    background:var(--paper);
+  }
+  .plan-opt.active{ background:var(--ink); color:var(--paper); }
+  .plan-opt small{ display:block; font-family:'IBM Plex Mono', monospace; font-weight:400; margin-top:3px; font-size:12px; opacity:0.85;}
+  .submit-note{ font-size:12.5px; color:#5b5c56; margin-top:12px;}
+  .form-status{
+    display:none;
+    padding:11px 12px;
+    margin-top:14px;
+    border:1.5px solid var(--ink);
+    font-size:14px;
+    font-weight:600;
+  }
+  .form-status.success{ display:block; background:#e5efe6; color:#27452d; border-color:var(--green); }
+  .form-status.error{ display:block; background:#f7e8dc; color:#7b4210; border-color:var(--amber-dark); }
+  .contact-details{ margin-top:24px; border-top:1px solid var(--line); }
+  .contact-detail{ padding:14px 0; border-bottom:1px solid var(--line); }
+  .contact-detail strong{ display:block; font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--navy); margin-bottom:3px; }
+  .hp-field{ position:absolute !important; left:-10000px !important; width:1px !important; height:1px !important; overflow:hidden !important; }
+
+  .example-q{
+    border-left:3px solid var(--amber);
+    padding:14px 18px;
+    background:var(--paper-2);
+    margin-bottom:16px;
+    font-size:14.5px;
+  }
+  .example-q .who{
+    font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--navy); margin-top:8px; display:block;
+  }
+
+  .faq-item{
+    border-bottom:1px solid var(--line);
+    padding:20px 0;
+  }
+  .faq-item:first-child{ border-top:1px solid var(--line); }
+  .faq-item h3{
+    font-family:'Inter', sans-serif; font-weight:700; font-size:17px; margin-bottom:8px;
+  }
+  .faq-item p{ font-size:15px; color:#33342f; max-width:64ch;}
+
+  footer{ padding:36px 0; }
+  .foot-row{
+    display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px;
+  }
+  .foot-row .brand{ font-size:18px; }
+  .foot-links a{ margin-left:20px; font-size:13px; text-decoration:none; color:var(--ink);}
+  .fine{ font-size:12.5px; color:#5b5c56; margin-top:18px; max-width:70ch;}
+
+  @media (max-width:820px){
+    .hero-grid, .steps, .pricing-grid, .form-wrap{ grid-template-columns:1fr; }
+    .step{ border-right:none; border-bottom:2px solid var(--ink);}
+    .step:last-child{ border-bottom:none;}
+    .topbar{ align-items:flex-start; flex-direction:column; gap:12px; padding:14px 20px 10px; }
+    nav{ display:flex; width:100%; gap:18px; overflow-x:auto; padding:2px 0 7px; scrollbar-width:none; }
+    nav::-webkit-scrollbar{ display:none; }
+    nav a{ margin-left:0; white-space:nowrap; flex:0 0 auto; }
+    .nav-cta{ padding:6px 11px; }
+  }
+</style>
 </head>
 <body>
-  <header class="wrap top"><div class="brand">ASK THE <span>FINANCE GUY</span></div><div class="nav"><a href="#buyer-help">Buyer Help</a><a href="#training">F&amp;I Training</a></div></header>
-  <main class="wrap" id="buyer-help">
-    <section>
-      <div class="eyebrow">Before you sign—or after you buy</div>
-      <h1>Make the deal your <em>best deal.</em></h1>
-      <p class="lead">Get an independent review of vehicle pricing, financing, mystery fees, interest-rate markups, and protection products—without dealership pressure.</p>
-      <div class="points">
-        <div class="point"><span class="check">✓</span><span>Let us help with the negotiation and explain the numbers.</span></div>
-        <div class="point"><span class="check">✓</span><span>Make your challenged credit our challenge.</span></div>
-        <div class="point"><span class="check">✓</span><span>Already purchased? We can review your paperwork for costly surprises.</span></div>
-      </div>
-      <p class="experience">Over 20 years of experience in the automobile business.</p>
-    </section>
-    <form class="card" id="question-form">
-      <h2>Ask your question</h2>
-      <p>Choose a review, tell us what happened, and continue to secure payment.</p>
-      <label for="name">Your name</label><input id="name" name="name" required autocomplete="name">
-      <label for="email">Email address</label><input id="email" name="email" type="email" required autocomplete="email">
-      <label for="question">What would you like reviewed?</label><textarea id="question" name="question" required placeholder="Tell us about the vehicle, price, financing, fees, or paperwork..."></textarea>
-      <div class="plans">
-        <label class="plan"><input type="radio" name="plan" value="question" checked><span>Quick question</span><strong class="price">$19.99</strong></label>
-        <label class="plan"><input type="radio" name="plan" value="review"><span>Detailed review</span><strong class="price">$39.99</strong></label>
-      </div>
-      <button id="submit" type="submit">Continue to secure payment</button>
-      <p class="fine" id="status">Payments are securely processed by Stripe.</p>
-    </form>
-  </main>
 
-  <section class="training" id="training">
-    <div class="wrap training-grid">
-      <div>
-        <span class="badge">FOUNDER'S EDITION</span>
-        <div class="eyebrow" style="margin-top:14px">From the showroom to the finance office</div>
-        <h2>The New Era<br><em style="font-style:normal;color:var(--gold)">Finance Manager</em></h2>
-        <p class="sub">A career-transition playbook for automotive sales professionals who want to step into F&amp;I with knowledge, confidence, integrity, and repeatable professional habits.</p>
-        <div class="curriculum">
-          <div class="module">Automotive finance fundamentals</div>
-          <div class="module">Lender communication &amp; funding</div>
-          <div class="module">Customer needs analysis</div>
-          <div class="module">F&amp;I product presentation</div>
-          <div class="module">Documentation &amp; organization</div>
-          <div class="module">Trust, ethics &amp; communication</div>
-          <div class="module">Real-world scenarios</div>
-          <div class="module">Field assignments &amp; knowledge checks</div>
-        </div>
-        <p class="experience">Created by Sebastian Badillo — 25 years of automotive industry experience.</p>
-      </div>
-      <div class="training-card">
-        <h3 style="margin-top:0;font-size:1.55rem">Build your F&amp;I career before the title arrives.</h3>
-        <p style="color:var(--muted)">Use it for self-study or as the core of a structured dealership development program.</p>
-        <ul>
-          <li>Founder's Edition digital playbook</li>
-          <li>Career-transition roadmap</li>
-          <li>Practical exercises and field assignments</li>
-          <li>Knowledge checks and reflection journal prompts</li>
-          <li>New Era Professional Education Certificate of Completion framework</li>
-        </ul>
-        <div class="price">$399 <span style="font-size:.9rem;color:var(--muted);font-weight:600">Founder's Edition</span></div>
-        <a class="cta" href="#training-order" onclick="document.getElementById('training-order').scrollIntoView({behavior:'smooth'});return false;">Get the Training</a>
-        <p class="mini">Professional education only. This is not a government license, academic degree, manufacturer credential, or industry-wide accreditation.</p>
+<header>
+  <div class="topbar">
+    <div class="brand"><span class="dot"></span>Ask The Finance Guy</div>
+    <nav>
+      <a href="#how">How it works</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#ask">Ask a question</a>
+      <a href="#contact">Contact me</a>
+      <a href="#faq">FAQ</a>
+      <a class="nav-cta" href="#ask">Ask now</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="kicker">ASK THE FINANCE GUY</span>
+      <h1>Did you get a good deal?</h1>
+      <ul class="hero-questions">
+        <li>Was the paperwork filled out correctly?</li>
+        <li>Are you car shopping, and you wanna make sure you're getting a good deal before you buy the vehicle?</li>
+        <li>Is this a fair and honest deal?</li>
+      </ul>
+      <p class="lede">Dealer add-ons, APR games, lease markups, trade-in lowballing — send me the numbers before you commit, and I'll tell you straight whether it's a fair deal or a trap.</p>
+      <div class="hero-actions">
+        <a href="#ask" class="btn btn-primary">Ask a question — $19.99</a>
+        <a href="#pricing" class="btn btn-ghost">See pricing</a>
       </div>
     </div>
-    <div class="wrap" style="margin-top:28px">
-      <form class="card" id="training-order" style="max-width:720px;margin:auto">
-        <h2>Get The New Era Finance Manager</h2>
-        <p>Enter your information and continue to secure Stripe checkout.</p>
-        <label for="tname">Your name</label><input id="tname" name="name" required autocomplete="name">
-        <label for="temail">Email address</label><input id="temail" name="email" type="email" required autocomplete="email">
-        <input type="hidden" name="plan" value="training">
-        <input type="hidden" name="question" value="New Era Finance Manager Founder's Edition purchase">
-        <button id="training-submit" type="submit">Buy Founder's Edition — $399</button>
-        <p class="fine" id="training-status">Payments are securely processed by Stripe. Digital fulfillment instructions are sent after purchase.</p>
+    <div class="sticker">
+      <div class="sticker-head"><span>SAMPLE REVIEW</span><span>FILE #2298</span></div>
+      <div class="sticker-row"><span class="label">Vehicle</span><span class="val">2023 CR-V EX-L</span></div>
+      <div class="sticker-row"><span class="label">Advertised price</span><span class="val">$29,450</span></div>
+      <div class="sticker-row"><span class="label">Dealer add-ons found</span><span class="val">$2,140</span></div>
+      <div class="sticker-row"><span class="label">APR offered vs. market</span><span class="val">+2.1 pts high</span></div>
+      <div class="sticker-row"><span class="label">Verdict</span><span class="val">Renegotiate</span></div>
+      <div class="sticker-total"><span>Buyer saved</span><span>~$3,600</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="wrap">
+    <span class="strip-item">23+ YEARS IN AUTO FINANCE</span>
+    <span class="strip-item">ANSWERS IN UNDER 24 HRS</span>
+    <span class="strip-item">NO DEALERSHIP AFFILIATIONS</span>
+    <span class="strip-item">PAY ONLY FOR THE ANSWER</span>
+  </div>
+</div>
+
+<section id="how">
+  <div class="wrap">
+    <div class="eyebrow">Process</div>
+    <h2 class="section-title">Three steps, no sales pitch.</h2>
+    <p class="section-sub">You're not buying a subscription to a dashboard. You're buying a straight answer from someone who isn't getting a commission off your decision.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="num">01</div>
+        <h3>Send the details</h3>
+        <p>Paste the deal sheet, the numbers on the sticker, the loan terms — whatever you've been handed. Photos of paperwork are fine.</p>
+      </div>
+      <div class="step">
+        <div class="num">02</div>
+        <h3>Pick your plan</h3>
+        <p>One question, one answer — or ten minutes to go back and forth until you actually understand the deal.</p>
+      </div>
+      <div class="step">
+        <div class="num">03</div>
+        <h3>Get a plain answer</h3>
+        <p>What's fair, what's padded, and exactly what to say back to the dealer or lender if it isn't.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="wrap">
+    <div class="eyebrow">Pricing</div>
+    <h2 class="section-title">Pay for the answer, not a membership.</h2>
+    <p class="section-sub">Two ways to get help, depending on how complicated the deal is.</p>
+
+    <div class="pricing-grid">
+      <div class="price-card">
+        <div class="ph">
+          <span class="tag">SINGLE QUESTION</span>
+          <h3>One clear answer</h3>
+        </div>
+        <div class="price-body">
+          <div class="amount">$19.99<span class="per">/ question</span></div>
+          <ul class="price-list">
+            <li><span class="mk">✓</span> One specific question, one detailed answer</li>
+            <li><span class="mk">✓</span> Written response within 24 hours</li>
+            <li><span class="mk">✓</span> Good for: "is this APR normal?" or "what's this fee?"</li>
+          </ul>
+          <a href="#ask" class="btn btn-primary">Ask one question</a>
+        </div>
+      </div>
+
+      <div class="price-card feat">
+        <div class="ph">
+          <span class="tag">UNLIMITED WINDOW</span>
+          <h3>10-minute live session</h3>
+        </div>
+        <div class="price-body">
+          <div class="amount">$39.99<span class="per">/ 10 min</span></div>
+          <ul class="price-list">
+            <li><span class="mk">✓</span> Unlimited back-and-forth questions, live</li>
+            <li><span class="mk">✓</span> Best for full deal reviews or loan comparisons</li>
+            <li><span class="mk">✓</span> Good for: reviewing a full deal sheet line by line</li>
+          </ul>
+          <a href="#ask" class="btn btn-primary">Book 10 minutes</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="ask">
+  <div class="wrap form-wrap">
+    <div>
+      <div class="eyebrow">Ask</div>
+      <h2 class="section-title">What people actually ask.</h2>
+      <div class="example-q">
+        "Dealer says $1,800 in 'market adjustment' is non-negotiable on a car that's been sitting for 60 days. True or bluff?"
+        <span class="who">— Toyota Tacoma buyer, TX</span>
+      </div>
+      <div class="example-q">
+        "Credit union offered 6.9%, dealer's finance guy offered 8.4% but says it includes 'free' gap insurance. Which is actually cheaper?"
+        <span class="who">— refinance question, OH</span>
+      </div>
+      <div class="example-q">
+        "Lease says $0 due at signing but the monthly payment seems high for the MSRP. What am I missing?"
+        <span class="who">— lease shopper, WA</span>
+      </div>
+    </div>
+
+    <div class="form-card">
+      <div class="plan-toggle">
+        <div class="plan-opt active" id="opt-single" onclick="selectPlan('single')">
+          Single question
+          <small>$19.99</small>
+        </div>
+        <div class="plan-opt" id="opt-session" onclick="selectPlan('session')">
+          10-min session
+          <small>$39.99</small>
+        </div>
+      </div>
+
+      <form id="question-form">
+        <div class="field-row">
+          <div class="field">
+            <label>NAME</label>
+            <input type="text" name="name" required placeholder="Jordan Ramirez">
+          </div>
+          <div class="field">
+            <label>EMAIL</label>
+            <input type="email" name="email" required placeholder="you@email.com">
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label>VEHICLE / DEAL TYPE</label>
+            <input type="text" name="vehicle" placeholder="2024 RAV4 XLE, purchase">
+          </div>
+          <div class="field">
+            <label>SITUATION</label>
+            <select name="situation">
+              <option>New car purchase</option>
+              <option>Used car purchase</option>
+              <option>Lease</option>
+              <option>Refinance</option>
+              <option>Trade-in</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label>YOUR QUESTION</label>
+          <textarea name="question" required placeholder="Paste the numbers you were given and what you want checked..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%; border:none;" id="pay-btn">Continue to payment — $19.99</button>
+        <p class="submit-note" id="form-error" style="color:#9C5E15; display:none;"></p>
+        <p class="submit-note">You'll be taken to a secure Stripe checkout to complete payment before your question is sent.</p>
+        <p class="submit-note" style="margin-top:8px; padding-top:8px; border-top:1px solid var(--line);">This service is informational only, drawing on 23+ years in automotive sales and finance. It is not legal counsel, legal advice, or a licensed financial opinion, and no attorney-client relationship is created.</p>
       </form>
     </div>
-  </section>
-  <footer><div class="wrap">Educational and informational service only. This is not legal advice, a legal opinion, or a guarantee of financing or savings.</div></footer>
-  <script>
-    const form=document.getElementById('question-form'),button=document.getElementById('submit'),status=document.getElementById('status');
-    form.addEventListener('submit',async(e)=>{e.preventDefault();button.disabled=true;button.textContent='Opening secure checkout…';status.textContent='Please wait.';
-      try{const data=Object.fromEntries(new FormData(form));const response=await fetch('/api/create-checkout',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});const result=await response.json();if(!response.ok)throw new Error(result.error||'Unable to start checkout.');window.location.href=result.url}
-      catch(error){status.textContent=error.message;button.disabled=false;button.textContent='Continue to secure payment'}});
-    const tform=document.getElementById('training-order'),tbutton=document.getElementById('training-submit'),tstatus=document.getElementById('training-status');
-    tform.addEventListener('submit',async(e)=>{e.preventDefault();tbutton.disabled=true;tbutton.textContent='Opening secure checkout…';tstatus.textContent='Please wait.';try{const data=Object.fromEntries(new FormData(tform));const response=await fetch('/api/create-checkout',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});const result=await response.json();if(!response.ok)throw new Error(result.error||'Unable to start checkout.');window.location.href=result.url}catch(error){tstatus.textContent=error.message;tbutton.disabled=false;tbutton.textContent="Buy Founder's Edition — $399"}});
-  </script>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap form-wrap">
+    <div>
+      <div class="eyebrow">Contact</div>
+      <h2 class="section-title">Have a question before you buy?</h2>
+      <p class="section-sub">Send a general inquiry and I'll get back to you as soon as possible. For a detailed deal review, use the paid question form above.</p>
+      <div class="contact-details">
+        <div class="contact-detail">
+          <strong>BEST FOR</strong>
+          Questions about the service, scheduling, or which option fits your situation.
+        </div>
+        <div class="contact-detail">
+          <strong>RESPONSE</strong>
+          Replies are sent to the email address or phone number you provide.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-card">
+      <form id="contact-form">
+        <div class="field-row">
+          <div class="field">
+            <label for="contact-name">NAME</label>
+            <input id="contact-name" type="text" name="name" required autocomplete="name" placeholder="Your name">
+          </div>
+          <div class="field">
+            <label for="contact-email">EMAIL</label>
+            <input id="contact-email" type="email" name="email" required autocomplete="email" placeholder="you@email.com">
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="contact-phone">PHONE (OPTIONAL)</label>
+            <input id="contact-phone" type="tel" name="phone" autocomplete="tel" placeholder="(555) 555-5555">
+          </div>
+          <div class="field">
+            <label for="contact-preference">PREFERRED REPLY</label>
+            <select id="contact-preference" name="preferredContact">
+              <option value="Email">Email</option>
+              <option value="Phone">Phone</option>
+              <option value="Text message">Text message</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="contact-topic">WHAT CAN I HELP WITH?</label>
+          <select id="contact-topic" name="topic">
+            <option value="Question about the service">Question about the service</option>
+            <option value="Help choosing an option">Help choosing an option</option>
+            <option value="Scheduling">Scheduling</option>
+            <option value="Dealership or business inquiry">Dealership or business inquiry</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="contact-message">MESSAGE</label>
+          <textarea id="contact-message" name="message" required maxlength="4000" placeholder="How can I help?"></textarea>
+        </div>
+        <div class="hp-field" aria-hidden="true">
+          <label for="contact-website">Leave this field blank</label>
+          <input id="contact-website" type="text" name="website" tabindex="-1" autocomplete="off">
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%; border:none;" id="contact-btn">Send inquiry</button>
+        <div id="contact-status" class="form-status" role="status" aria-live="polite"></div>
+        <p class="submit-note">Please do not include Social Security numbers, account numbers, birth dates, or other sensitive financial information.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="eyebrow">FAQ</div>
+    <h2 class="section-title">Before you ask.</h2>
+    <div class="faq-item">
+      <h3>Who is actually answering?</h3>
+      <p>One person, not a chatbot or a call center — background in auto finance and dealer-side sales, now working the other side of the table for buyers.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What if my question needs more than 10 minutes?</h3>
+      <p>Say so up front — complex deals (multiple vehicles, disputes, or lease-vs-buy comparisons) can be quoted as a flat fee before you pay.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Is this legal advice?</h3>
+      <p>No. This is not legal counsel or legal advice, and no attorney-client relationship is formed by using this site. Answers are informational only, based on 23+ years of hands-on experience in automotive sales and finance — not a licensed legal or financial opinion. For contract disputes or anything with legal consequences, talk to a licensed attorney in your state.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Refunds?</h3>
+      <p>If you don't get an answer within 24 hours for the single-question plan, you get a full refund, no questions asked.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-row">
+      <div class="brand">Ask The Finance Guy</div>
+      <div class="foot-links">
+        <a href="#pricing">Pricing</a>
+        <a href="#ask">Ask a question</a>
+        <a href="#contact">Contact me</a>
+        <a href="#faq">FAQ</a>
+      </div>
+    </div>
+    <p class="fine">This site is informational only. It does not provide legal counsel, legal advice, or licensed financial advice, and using it does not create an attorney-client relationship. Guidance reflects 23+ years of experience in automotive sales and finance, not a licensed legal or financial opinion.</p>
+    <p class="fine">This is a template. Wire the "Continue to payment" button to your own Stripe Payment Links to actually collect the $19.99 / $39.99 charges — see the setup notes shared alongside this file.</p>
+  </div>
+</footer>
+
+<script>
+  let currentPlan = 'single';
+  function selectPlan(plan){
+    currentPlan = plan;
+    document.getElementById('opt-single').classList.toggle('active', plan==='single');
+    document.getElementById('opt-session').classList.toggle('active', plan==='session');
+    document.getElementById('pay-btn').textContent = plan==='single'
+      ? 'Continue to payment — $19.99'
+      : 'Continue to payment — $39.99';
+  }
+
+  document.getElementById('question-form').addEventListener('submit', async function(e){
+    e.preventDefault();
+    const errEl = document.getElementById('form-error');
+    const payBtn = document.getElementById('pay-btn');
+    errEl.style.display = 'none';
+
+    const form = e.target;
+    const payload = {
+      plan: currentPlan,
+      name: form.name.value,
+      email: form.email.value,
+      vehicle: form.vehicle.value,
+      situation: form.situation.value,
+      question: form.question.value,
+    };
+
+    payBtn.textContent = 'Redirecting to checkout...';
+    payBtn.disabled = true;
+
+    try {
+      const resp = await fetch('/api/create-checkout', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      const data = await resp.json();
+      if (!resp.ok || !data.url) {
+        throw new Error(data.error || 'Something went wrong.');
+      }
+      window.location.href = data.url; // off to Stripe Checkout
+    } catch (err) {
+      errEl.textContent = err.message || 'Could not start checkout. Please try again.';
+      errEl.style.display = 'block';
+      payBtn.disabled = false;
+      payBtn.textContent = currentPlan === 'single'
+        ? 'Continue to payment — $19.99'
+        : 'Continue to payment — $39.99';
+    }
+  });
+
+  document.getElementById('contact-form').addEventListener('submit', async function(e){
+    e.preventDefault();
+    const form = e.target;
+    const statusEl = document.getElementById('contact-status');
+    const submitBtn = document.getElementById('contact-btn');
+    statusEl.className = 'form-status';
+    statusEl.textContent = '';
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+
+    const payload = {
+      name: form.name.value.trim(),
+      email: form.email.value.trim(),
+      phone: form.phone.value.trim(),
+      preferredContact: form.preferredContact.value,
+      topic: form.topic.value,
+      message: form.message.value.trim(),
+      website: form.website.value,
+    };
+
+    try {
+      const resp = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      const data = await resp.json();
+      if (!resp.ok) throw new Error(data.error || 'Your inquiry could not be sent.');
+      form.reset();
+      statusEl.textContent = 'Thanks — your inquiry has been sent. I’ll get back to you as soon as possible.';
+      statusEl.className = 'form-status success';
+    } catch (err) {
+      statusEl.textContent = err.message || 'Your inquiry could not be sent. Please try again.';
+      statusEl.className = 'form-status error';
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Send inquiry';
+    }
+  });
+</script>
+
 </body>
 </html>
