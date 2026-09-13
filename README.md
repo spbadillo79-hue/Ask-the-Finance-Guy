@@ -7,6 +7,10 @@ It's built to deploy on **Vercel** for free, with no server to manage.
 
 The site also includes a **Contact Me** section. General inquiries are sent by
 `/api/contact.js` to the same `NOTIFY_EMAIL` inbox used for paid questions.
+
+The **New Era Finance Manager** Founder's Edition training section includes a
+secure Stripe checkout for a one-time **$399.00** purchase. The amount is set
+in `/api/create-checkout.js` as `39900` cents.
 The form includes basic validation, a spam honeypot, and a reminder not to send
 sensitive financial information.
 
