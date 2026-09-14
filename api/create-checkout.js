@@ -16,9 +16,10 @@ module.exports = async (req, res) => {
 
   try {
     const { plan, name, email, vehicle, situation, question } = req.body;
+    const siteUrl = process.env.SITE_URL || `https://${req.headers.host}`;
 
     const priceId = PRICES[plan];
-    if (!priceId) {
+    if (!priceId && plan !== 'training') {
       res.status(400).json({ error: 'Invalid plan selected.' });
       return;
     }
@@ -30,7 +31,16 @@ module.exports = async (req, res) => {
     const session = await stripe.checkout.sessions.create({
       mode: 'payment',
       payment_method_types: ['card'],
-      line_items: [{ price: priceId, quantity: 1 }],
+      line_items: plan === 'training'
+        ? [{
+            price_data: {
+              currency: 'usd',
+              unit_amount: 39900,
+              product_data: { name: "The New Era Finance Manager — Founder's Edition" },
+            },
+            quantity: 1,
+          }]
+        : [{ price: priceId, quantity: 1 }],
       customer_email: email,
       // Metadata is how the webhook below knows what the buyer actually asked.
       // Stripe metadata values are capped at 500 characters each.
@@ -42,8 +52,8 @@ module.exports = async (req, res) => {
         situation: String(situation || '').slice(0, 490),
         question: String(question).slice(0, 490),
       },
-      success_url: `${process.env.SITE_URL}/?paid=1`,
-      cancel_url: `${process.env.SITE_URL}/?canceled=1`,
+      success_url: `${siteUrl}/?paid=1`,
+      cancel_url: `${siteUrl}/?canceled=1`,
     });
 
     res.status(200).json({ url: session.url });
