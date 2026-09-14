@@ -1,5 +1,5 @@
 const Stripe = require('stripe');
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, { apiVersion: '2025-02-24.acacia' });
+apiVersion: '2025-03-31.basil'
 // Set these to the Price IDs you create in the Stripe Dashboard
 // (Product catalog -> Add product -> $19.99 one-time, and $39.99 one-time)
 const PRICES = {
