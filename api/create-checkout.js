@@ -34,8 +34,13 @@ module.exports = async (req, res) => {
         ? [{
             price_data: {
               currency: 'usd',
-              unit_amount: 39900,
-              product_data: { name: "The New Era Finance Manager — Founder's Edition" },
+              unit_amount: product_data: {
+  tax_code: 'txcd_10302000',
+  name: "Your existing product name"
+},
+  tax_code: 'txcd_10302000',
+  name: "Your existing product name"
+},
             },
             quantity: 1,
           }]
