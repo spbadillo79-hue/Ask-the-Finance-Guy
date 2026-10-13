@@ -36,7 +36,8 @@ module.exports = async (req, res) => {
     const session = event.data.object;
     const meta = session.metadata || {};
     const amount = ((session.amount_total || 0) / 100).toFixed(2);
-    const planLabel = meta.plan === 'session' ? '10-minute session' : 'Single question';
+    const isTraining = meta.plan === 'training';
+    const planLabel = isTraining ? 'New Era Finance Manager training' : meta.plan === 'session' ? '10-minute session' : 'Single question';
 
     try {
       // Uses Resend (resend.com) — swap this block for SendGrid/Postmark/SMTP if you prefer.
@@ -50,7 +51,7 @@ module.exports = async (req, res) => {
           from: process.env.FROM_EMAIL,
           to: process.env.NOTIFY_EMAIL,
           reply_to: meta.email || session.customer_email || undefined,
-          subject: `New paid question — ${planLabel} ($${amount})`,
+          subject: `${isTraining ? 'New training order — delivery required' : 'New paid question'} — ${planLabel} (${amount})`,
           text:
             `Plan: ${planLabel} ($${amount})\n` +
             `From: ${meta.name || 'unknown'} <${meta.email || session.customer_email || 'no email'}>\n` +
@@ -71,3 +72,4 @@ module.exports = async (req, res) => {
 
   res.status(200).json({ received: true });
 };
+
