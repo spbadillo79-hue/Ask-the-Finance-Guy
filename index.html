@@ -386,13 +386,33 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 button:disabled{opacity:.7;cursor:wait;}
 @media(max-width:520px){.field-row{grid-template-columns:1fr}.wrap{padding:0 20px}.training-card,.training-order,.form-card{padding:20px}.hero h1{max-width:13ch}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+/* Original Ask The Finance Guy branding */
+:root{--navy:#0b1c34;--amber:#d5ad58;--amber-dark:#78581e;--paper:#f7f5ef;--paper-2:#ece7da;--ink:#142238}
+header{background:#08182c;border-bottom:1px solid #d5ad5866;color:#fff}
+.topbar{max-width:1240px;margin:auto;gap:24px;padding:10px 28px}
+.brand-logo{display:block;width:64px;height:64px;object-fit:contain;border-radius:50%}
+.brand-link{display:flex;gap:12px;align-items:center;text-decoration:none}.brand-link span{font-size:21px}
+nav a{color:#fff}nav .nav-cta{background:#e2bd6b;color:#08182c;border:1px solid #e2bd6b}
+.hero{background:radial-gradient(ellipse at 90% 10%,#254366 0,transparent 55%),#08182c;color:#fff;padding:72px 0}
+.hero-grid{align-items:center;grid-template-columns:1.15fr 1fr;gap:48px}.hero h1{font-size:clamp(48px,6.5vw,78px);max-width:12ch}
+.hero .kicker{border-color:#d5ad5880;color:#edcf8c}.hero p.lede{color:#d1dbe6;font-size:17px}.hero-proof{color:#e8d9b9}.hero-proof span:before{color:#e2bd6b}.hero .submit-note{color:#c2cbd7}
+.hero .btn-primary{background:#e2bd6b;border-color:#e2bd6b;color:#08182c}.hero .btn-ghost{border-color:#8392a7;color:#fff}
+.brand-stage{position:relative;padding:12px 10px 28px;text-align:center}.hero-logo{width:100%;max-width:420px;aspect-ratio:1;object-fit:contain;border-radius:12px;box-shadow:0 24px 70px #0005}
+.brand-stage figcaption{color:#edcf8c;font-size:12px;letter-spacing:.12em;margin-top:18px;font-family:'IBM Plex Mono',monospace}
+.strip{background:#e2bd6b;border:0}.strip-item{color:#10233c;font-weight:600}
+.visual-topics{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:36px 0 0}.visual-topic{padding:24px;border:1px solid #d8d4c9;background:#fff;border-radius:10px}.topic-icon{width:50px;height:50px;background:#f3ead5;border-radius:12px;display:grid;place-items:center;margin-bottom:18px;color:#8a6524}.topic-icon svg{width:28px;height:28px}.visual-topic h3{font-size:26px;margin-bottom:10px}.visual-topic p{font-size:14px;color:#4a5564}
+.playbook-preview{position:relative;min-height:310px;background:linear-gradient(135deg,#eee7d9,#d9cbb1);display:grid;place-items:center;padding:32px;margin-bottom:28px;border-radius:8px;overflow:hidden}.book-cover{width:200px;min-height:255px;padding:22px 20px;color:#fff;background:linear-gradient(120deg,#142d4c,#061326);box-shadow:12px 16px 24px #10203944;border-left:8px solid #d5ad58;transform:rotate(-7deg);text-align:left}.book-cover img{width:64px;height:64px;border-radius:50%;margin-bottom:18px}.book-cover strong{display:block;font-family:'Big Shoulders Display',sans-serif;font-size:29px;line-height:1.05}.book-cover span{display:block;color:#e2bd6b;font-size:9px;letter-spacing:.1em;margin-top:17px}.playbook-preview small{position:absolute;bottom:9px;right:12px;font-size:10px;color:#4a5564}
+.training-card{border-color:#d7c397;border-radius:10px;box-shadow:0 12px 32px #162a4310}.training-order{border-radius:10px;border-color:#bd9b50}.module{border-radius:5px;border-left:3px solid #b69243}.steps{border-color:#d8d4c9;background:#fff;border-radius:10px;overflow:hidden}.step{border-color:#d8d4c9}.step .num{font-size:20px}.foot-row .brand img{width:55px;height:55px;border-radius:50%}
+@media(max-width:800px){.hero-grid{grid-template-columns:1fr}.brand-stage{max-width:350px;margin:8px auto 0}.hero{padding:40px 0}.hero h1{max-width:15ch}.visual-topics{grid-template-columns:1fr}.topbar{flex-wrap:wrap;justify-content:center;gap:8px}nav{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 16px}nav a{margin:0}.brand-link span{font-size:20px}.brand-logo{width:48px;height:48px}section[id],form[id]{scroll-margin-top:160px}}
+
 </style>
 </head>
 <body>
 
 <header>
   <div class="topbar">
-    <div class="brand"><span class="dot"></span>Ask The Finance Guy</div>
+    <a class="brand brand-link" href="#home" aria-label="Ask The Finance Guy home"><img class="brand-logo" src="/brand-logo.svg" alt=""><span>Ask The Finance Guy</span></a>
     <nav aria-label="Main navigation"><a href="#training">Training</a><a href="#how">How it works</a><a href="#contact">Contact</a><a class="nav-cta" href="#training-order">Get the training — $399</a></nav>
   </div>
 </header>
@@ -405,20 +425,14 @@ button:disabled{opacity:.7;cursor:wait;}
 <div class="hero-proof"><span>25 years of industry experience</span><span>Practical digital playbook</span><span>Self-study or team development</span></div>
 <div class="hero-actions"><a href="#training-order" class="btn btn-primary">Get the training — $399</a><a href="#training" class="btn btn-ghost">Explore the curriculum</a></div>
 <p class="submit-note">One-time purchase • Founder’s Edition • Professional education</p>
-</div><div class="sticker">
-<div class="sticker-head"><span>THE NEW ERA</span><span>MANAGEMENT PLAYBOOK</span></div>
-<div class="sticker-row"><span class="label">Finance managers</span><span class="val">F&amp;I SKILLS</span></div>
-<div class="sticker-row"><span class="label">Sales managers</span><span class="val">TEAM HABITS</span></div>
-<div class="sticker-row"><span class="label">Aspiring managers</span><span class="val">ROLE READINESS</span></div>
-<div class="sticker-row"><span class="label">Learning format</span><span class="val">DIGITAL PLAYBOOK</span></div>
-<div class="sticker-total"><span>Founder’s Edition</span><span>$399</span></div>
-<p class="sticker-note">Created by Sebastian Badillo. Real-world scenarios, exercises and knowledge checks to bring learning into your daily work.</p></div></div></section>
+</div><figure class="brand-stage"><img class="hero-logo" src="/brand-logo.svg" alt="Ask The Finance Guy gold emblem with a suited figure, car and checkmark" width="640" height="640" fetchpriority="high"><figcaption>AUTOMOTIVE EXPERIENCE. PRACTICAL EDUCATION.</figcaption></figure></div></section>
 <div class="strip"><div class="wrap"><span class="strip-item">25 YEARS IN AUTOMOTIVE RETAIL</span><span class="strip-item">FINANCE &amp; SALES MANAGERS</span><span class="strip-item">ONE-TIME PURCHASE</span></div></div>
 <section id="how"><div class="wrap"><div class="eyebrow">How it works</div><h2 class="section-title">Learn. Practice. Apply.</h2><p class="section-sub">A practical resource for individual development and dealership team learning.</p><div class="steps">
-<div class="step"><div class="num">01</div><h3>Get the playbook</h3><p>Enter your name and email, then complete the $399 one-time purchase through Stripe. The training is delivered by email after purchase; delivery is handled manually.</p></div>
+<div class="step"><div class="num">01</div><h3>Get the playbook</h3><p>Complete the $399 one-time purchase through Stripe, where you enter your name and email. The training is delivered by email after purchase; delivery is handled manually.</p></div>
 <div class="step"><div class="num">02</div><h3>Work through the material</h3><p>Study the fundamentals, use the exercises and test your understanding with knowledge checks.</p></div>
 <div class="step"><div class="num">03</div><h3>Bring it to your team</h3><p>Apply what you learn to customer conversations, sales-to-finance handoffs, documentation and professional habits.</p></div>
 </div></div></section>
+<section id="skills"><div class="wrap"><div class="eyebrow">Inside the training</div><h2 class="section-title">Skills for the showroom.<br>Habits for the finance office.</h2><div class="visual-topics"><article class="visual-topic"><div class="topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16v13H4zM8 7V4h8v3M4 12h16M10 12v3h4v-3"/></svg></div><h3>Understand the deal</h3><p>Build your foundation in automotive finance, lender communication and funding.</p></article><article class="visual-topic"><div class="topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v12H4zM8 21l4-4 4 4M8 9h8M8 13h5"/></svg></div><h3>Lead the conversation</h3><p>Practice needs analysis, clear product explanations and effective sales-to-finance handoffs.</p></article><article class="visual-topic"><div class="topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4h8v3H8zM8 5H5v16h14V5h-3M8 12l2 2 5-5M8 18h8"/></svg></div><h3>Build better habits</h3><p>Bring documentation, organization, ethics and team accountability into daily work.</p></article></div></div></section>
 <section id="training">
   <div class="wrap">
     <div class="training-grid">
@@ -437,9 +451,9 @@ button:disabled{opacity:.7;cursor:wait;}
           <div class="module">Real-world scenarios</div>
           <div class="module">Field assignments &amp; knowledge checks</div>
         </div>
-        <p class="fine">Created by Sebastian Badillo — 25 years of automotive industry experience.</p>
+        <p class="fine">Built from 25 years of automotive industry experience.</p>
       </div>
-      <div class="training-card">
+      <div class="training-card"><div class="playbook-preview" role="img" aria-label="Illustrative digital playbook cover"><div class="book-cover"><img src="/brand-logo.svg" alt="" loading="lazy"><strong>THE NEW ERA<br>FINANCE<br>MANAGER</strong><span>FOUNDER’S EDITION<br>ASK THE FINANCE GUY</span></div><small>Illustrative playbook mockup</small></div>
         <h3>Lead with knowledge. Work with confidence.</h3>
         <p>Use it for self-study or as the core of a structured dealership development program.</p>
         <ul>
@@ -456,23 +470,13 @@ button:disabled{opacity:.7;cursor:wait;}
       </div>
     </div>
 
-    <form id="training-order" class="training-order">
+    <div id="training-order" class="training-order">
       <div class="eyebrow">Enroll</div>
       <h2 class="section-title">Get The New Era Finance Manager</h2>
-      <p class="section-sub">Enter your information and continue to secure Stripe checkout.</p>
-      <div class="field-row">
-        <div class="field">
-          <label for="training-name">NAME</label>
-          <input id="training-name" name="name" required autocomplete="name" placeholder="Your name">
-        </div>
-        <div class="field">
-          <label for="training-email">EMAIL</label>
-          <input id="training-email" name="email" type="email" required autocomplete="email" placeholder="you@email.com">
-        </div>
-      </div>
-      <button id="training-submit" type="submit" class="btn btn-primary" style="width:100%; border:none;">Buy Founder's Edition — $399</button>
-      <p class="submit-note" id="training-status" role="status" aria-live="polite">Payments are securely processed by Stripe. Training delivery is handled manually by email after purchase.</p>
-    </form>
+      <p class="section-sub">Continue to secure Stripe checkout to enter your name, email and payment details.</p>
+      <a id="training-submit" href="https://buy.stripe.com/fZu28r0n84JzeUwb05cEw01" class="btn btn-primary" style="width:100%;text-align:center;margin-top:20px;">Buy Founder's Edition — $399</a>
+      <p class="submit-note" id="training-status">One-time purchase. Any applicable tax is shown at checkout. Training is delivered manually by email after payment.</p>
+    </div>
   </div>
 </section>
 
@@ -549,12 +553,12 @@ button:disabled{opacity:.7;cursor:wait;}
 <section id="faq"><div class="wrap"><div class="eyebrow">FAQ</div><h2 class="section-title">Before you enroll.</h2>
 <div class="faq-item"><h3>Who is the training for?</h3><p>Finance managers, sales managers and automotive sales professionals preparing for a management or F&amp;I role. Dealership leaders can also use the material to guide team development.</p></div>
 <div class="faq-item"><h3>What am I buying?</h3><p>The New Era Finance Manager Founder’s Edition digital playbook for a one-time price of $399. It includes practical exercises, field assignments, real-world scenarios and knowledge checks.</p></div>
-<div class="faq-item"><h3>Who created it?</h3><p>Sebastian Badillo, drawing on 25 years of experience in automotive retail, sales management and finance.</p></div>
+<div class="faq-item"><h3>Who created it?</h3><p>Ask The Finance Guy, drawing on 25 years of experience in automotive retail, sales management and finance.</p></div>
 <div class="faq-item"><h3>Is this an accredited certification?</h3><p>No. This is professional education. It does not provide a government license, academic degree, manufacturer credential or industry-wide accreditation, and it does not guarantee employment or income.</p></div>
 <div class="faq-item"><h3>How do I receive the training?</h3><p>Training delivery is handled manually by email after purchase. Use an email address you can access. If you need help with delivery, send a purchase-support inquiry below.</p><a href="#contact">Contact purchase support →</a></div>
 <div class="faq-item"><h3>Can I ask about team use or refunds?</h3><p>Use the contact form to discuss team access or request the applicable purchase and refund terms before paying.</p></div>
 </div></section>
-<footer><div class="wrap"><div class="foot-row"><div class="brand">Ask The Finance Guy</div><div class="foot-links"><a href="#training">Training &amp; pricing</a><a href="#how">How it works</a><a href="#contact">Contact</a><a href="#faq">FAQ</a></div></div><p class="fine">Professional education based on 25 years of automotive industry experience. This material does not provide legal or licensed financial advice. Follow your dealership’s policies and applicable requirements.</p></div></footer>
+<footer><div class="wrap"><div class="foot-row"><div class="brand"><img src="/brand-logo.svg" alt="" loading="lazy">Ask The Finance Guy</div><div class="foot-links"><a href="#training">Training &amp; pricing</a><a href="#how">How it works</a><a href="#contact">Contact</a><a href="#faq">FAQ</a></div></div><p class="fine">Professional education based on 25 years of automotive industry experience. This material does not provide legal or licensed financial advice. Follow your dealership’s policies and applicable requirements.</p></div></footer>
 
 <script>
   document.getElementById('contact-form').addEventListener('submit', async function(e){
@@ -597,36 +601,6 @@ button:disabled{opacity:.7;cursor:wait;}
     }
   });
 
-  document.getElementById('training-order').addEventListener('submit', async function(e){
-    e.preventDefault();
-    const form = e.target;
-    const button = document.getElementById('training-submit');
-    const status = document.getElementById('training-status');
-    button.disabled = true;
-    button.textContent = 'Opening secure checkout...';
-    status.textContent = 'Please wait.';
-    try {
-      const resp = await fetch('/api/create-checkout', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          plan: 'training',
-          name: form.elements.namedItem('name').value,
-          email: form.elements.namedItem('email').value,
-          vehicle: '',
-          situation: 'New Era Finance Manager training',
-          question: "New Era Finance Manager Founder's Edition purchase",
-        }),
-      });
-      const data = await resp.json();
-      if (!resp.ok || !data.url) throw new Error(data.error || 'Unable to start checkout.');
-      window.location.href = data.url;
-    } catch (err) {
-      status.textContent = err.message || 'Unable to start checkout. Please try again.';
-      button.disabled = false;
-      button.textContent = "Buy Founder's Edition — $399";
-    }
-  });
 </script>
 
 </body>
