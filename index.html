@@ -439,92 +439,53 @@ nav .nav-cta { background: rgb(226, 189, 107); color: rgb(8, 24, 44); border: 1p
 @media (max-width: 650px) {
   .social-footer { grid-template-columns: 1fr; }
   .intro-offer strong { font-size: 46px; }
-}.bundle-topics{grid-template-columns:1fr 1fr}.consent{display:flex;align-items:flex-start;gap:10px;font-size:14px}.consent input{margin-top:5px;flex-shrink:0}#free-guide{background:#ece7da}#starter-bundle{background:#fff}#starter-bundle .training-price{color:#78581e}@media(max-width:800px){.bundle-topics{grid-template-columns:1fr}.training-grid{grid-template-columns:1fr}} </style>
+}.bundle-topics{grid-template-columns:1fr 1fr}.consent{display:flex;align-items:flex-start;gap:10px;font-size:14px}.consent input{margin-top:5px;flex-shrink:0}#free-guide{background:#ece7da}#starter-bundle{background:#fff}#starter-bundle .training-price{color:#78581e}@media(max-width:800px){.bundle-topics{grid-template-columns:1fr}.training-grid{grid-template-columns:1fr}}
+.menu-toggle { display: none; }
+[hidden] { display: none !important; }
+@media (min-width: 1101px) { #main-nav { display: flex; align-items: center; gap: 18px; } #main-nav a { margin-left: 0; font-size: 13px; } }
+@media (max-width: 1100px) {
+  .topbar { flex-direction: row; flex-wrap: wrap; align-items: center; gap: 12px; }
+  .brand-link span { font-size: 18px; }
+  .brand-logo { width: 46px; height: 46px; }
+  .menu-toggle { display: block; background: transparent; color: white; border: 1px solid #d5ad58; border-radius: 4px; padding: 9px 12px; font: inherit; cursor: pointer; }
+  #main-nav { display: none; width: 100%; overflow: visible; padding: 10px 0; }
+  #main-nav.is-open { display: flex; flex-direction: column; align-items: stretch; gap: 4px; }
+  #main-nav a { margin: 0; padding: 12px; white-space: normal; }
+  section[id], form[id] { scroll-margin-top: 100px; }
+  .hero h1 { font-size: clamp(42px, 12vw, 62px); }
+}
+</style>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Automotive Sales Training &amp; Objection Flashcards | Ask The Finance Guy</title>
-<meta name="description" content="Practical car sales training, a 30/60/90-day coaching manual and objection flashcards. Read a free sample and explore the starter bundle from Ask The Finance Guy.">
+<title>Interim F&amp;I Coverage &amp; Consulting | Ask The Finance Guy</title>
+<meta name="description" content="Interim F&I coverage, process reviews and team coaching for Illinois dealerships. Request coverage or a consultation with Ask The Finance Guy.">
 <link rel="preconnect" href="https://fonts.googleapis.com/">
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;900&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
 
-<link rel="canonical" href="https://www.askthefinanceguy.org/"><meta property="og:title" content="Better car sales conversations start with practice."><meta property="og:description" content="Free objection-handling sample, practical sales training and coaching tools from Ask The Finance Guy."><meta property="og:type" content="website"><meta property="og:url" content="https://www.askthefinanceguy.org/"></head>
+<link rel="canonical" href="https://www.askthefinanceguy.org/"><meta property="og:title" content="Keep your finance office moving."><meta property="og:description" content="Interim F&I coverage, practical process reviews and team coaching for Illinois dealerships."><meta property="og:type" content="website"><meta property="og:url" content="https://www.askthefinanceguy.org/"></head>
 <body>
 
 <header>
   <div class="topbar">
     <a class="brand brand-link" href="#home" aria-label="Ask The Finance Guy home"><img class="brand-logo" src="/brand-logo.svg" alt=""><span>Ask The Finance Guy</span></a>
-    <nav aria-label="Main navigation"><a href="#training">Training</a><a href="#how">How it works</a><a href="#contact">Contact</a><a href="#dealership-services">F&amp;I coverage &amp; consulting</a><a href="#starter-bundle">Starter bundle</a><a class="nav-cta" href="#free-guide">Free training sample</a><a href="https://new-era-manager.happysnail.chatgpt.site">Open New Era Manager</a></nav>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menu</button>
+    <nav id="main-nav" aria-label="Main navigation"><a href="#dealership-services">F&amp;I services</a><a href="#starter-bundle">Sales training</a><a href="#training">Finance playbook</a><a href="https://new-era-manager.happysnail.chatgpt.site">New Era Manager app</a><a class="nav-cta" href="#contact">Request a consultation</a></nav>
   </div>
 </header>
 
 <section class="hero" id="home">
 <div class="wrap hero-grid"><div>
-<span class="kicker">PRACTICAL AUTOMOTIVE SALES TRAINING</span>
-<h1>Better conversations. Stronger sales habits.</h1>
-<p class="lede">Know what to ask when a customer says “I need to think about it.” Build a repeatable sales process with practical objection flashcards and a 30/60/90-day training and coaching manual.</p>
-<div class="hero-proof"><span>25 years of automotive experience</span><span>Printable training tools</span><span>For salespeople and managers</span></div>
-<div class="hero-actions"><a href="#free-guide" class="btn btn-primary" data-track="free_sample_click">Get the free training sample</a><a href="#starter-bundle" class="btn btn-ghost">Explore the starter bundle</a></div>
-<p class="submit-note">Start with five common objections and practical responses. No purchase required.</p>
+<span class="kicker">INTERIM F&amp;I COVERAGE &amp; CONSULTING</span>
+<h1>Keep your finance office moving.</h1>
+<p class="lede">A staffing gap. A funding backlog. A team that needs a clearer process. Get personally delivered interim F&amp;I coverage, practical process reviews and team coaching for your dealership.</p>
+<div class="hero-proof"><span>25 years of automotive experience</span><span>South Chicago suburbs &amp; nearby Illinois</span><span>Coverage, consulting &amp; coaching</span></div>
+<div class="hero-actions"><a href="#contact" class="btn btn-primary" data-track="coverage_consultation_click">Request Coverage or a Consultation</a><a href="#dealership-services" class="btn btn-ghost">Explore F&amp;I services</a></div>
+<p class="submit-note">Tell us your location, requested dates or process challenge. Availability and scope are confirmed individually.</p>
 </div><figure class="brand-stage"><img class="hero-logo" src="/brand-logo.svg" alt="Ask The Finance Guy gold emblem with a suited figure, car and checkmark" width="640" height="640" fetchpriority="high"><figcaption>AUTOMOTIVE EXPERIENCE. PRACTICAL EDUCATION.</figcaption></figure></div></section>
-<div class="strip"><div class="wrap"><span class="strip-item">25 YEARS IN AUTOMOTIVE RETAIL</span><span class="strip-item">FINANCE &amp; SALES MANAGERS</span><span class="strip-item">ONE-TIME PURCHASE</span></div></div>
+<div class="strip"><div class="wrap"><span class="strip-item">25 YEARS IN AUTOMOTIVE RETAIL</span><span class="strip-item">TEMPORARY F&amp;I COVERAGE</span><span class="strip-item">PROCESS REVIEWS &amp; TEAM COACHING</span></div></div>
 
-<section id="free-guide"><div class="wrap training-grid"><div><div class="eyebrow">START HERE · FREE SAMPLE</div><h2 class="section-title">Five objections.<br>Better next questions.</h2><p class="section-sub">A practical guide to “just looking,” “best price,” “payment too high,” “think about it” and “talk to my partner.” Learn to listen, clarify and agree on a useful next step.</p><p style="margin-top:20px"><a href="/free-sales-objections.html" data-track="sample_preview">Read the free sample now →</a></p></div><div class="form-card"><h3 style="font-size:30px;margin-bottom:12px">Keep learning with The Finance Guy</h3><p style="margin-bottom:20px">Get the sample link by email and join our free list for occasional training tips and product updates.</p><form id="subscribe-form"><div class="field"><label for="subscribe-email">YOUR EMAIL</label><input type="email" id="subscribe-email" name="email" required autocomplete="email" maxlength="254" placeholder="you@example.com"></div><div class="hp-field" aria-hidden="true"><label for="subscribe-website">Leave blank</label><input id="subscribe-website" name="website" tabindex="-1" autocomplete="off"></div><label class="consent"><input id="subscribe-consent" type="checkbox" required> Yes, send me automotive training tips and product updates. I can unsubscribe any time.</label><button class="btn btn-primary" id="subscribe-btn" type="submit" style="width:100%;margin-top:18px">Send my free sample link</button><p class="submit-note">Free email subscription. Confirm your email to join. <a href="/privacy.html">Privacy &amp; unsubscribe</a>.</p><div id="subscribe-status" class="form-status" role="status" aria-live="polite"></div></form></div></div></section>
-<section id="starter-bundle"><div class="wrap"><div class="eyebrow">YOUR FIRST STEP · TWO PRACTICAL PDF RESOURCES</div><h2 class="section-title">Train the habit.<br>Practice the conversation.</h2><div class="training-grid"><div><p class="section-sub">Give yourself—or your sales team—a clear development plan and a simple way to practice every day.</p><div class="visual-topics bundle-topics"><article class="visual-topic"><span class="training-badge">01 · COACHING MANUAL</span><h3 style="margin-top:18px">A plan for progress</h3><p>30/60/90-day development, customer conversations, printable progress forms and skill checks.</p></article><article class="visual-topic"><span class="training-badge">02 · OBJECTIONS 101</span><h3 style="margin-top:18px">Practice before the showroom</h3><p>Printable objection flashcards with questions, practice responses and next steps for partner role-play.</p></article></div></div><div class="training-card"><h3>Sales Training Starter Bundle</h3><p>Salesperson Training &amp; Coaching Manual + Automobile Sales Objection Flashcards.</p><div class="intro-label">LIMITED LAUNCH ALLOCATION</div><div class="training-price" id="bundle-price">From $19.99</div><p id="bundle-allocation">First 10 completed purchases at $19.99.</p><a class="btn btn-primary" id="bundle-buy" href="https://buy.stripe.com/5kQ14n6Lw4JzeUwd8dcEw04" data-track="bundle_checkout_click" style="display:block;text-align:center;margin-top:22px">Check launch offer on Stripe</a><p class="submit-note">One-time purchase. Both PDFs are delivered manually by email after payment. Not an instant download. Confirm the price at checkout.</p><p class="fine">Launch pricing: first 10 at $19.99, next 10 at $29.99, next 30 at $39.99, then $59.99 standard bundle pricing. Each allocation is limited in Stripe.</p><p class="fine"><a href="#contact">Ask about delivery, team use or refund terms before buying.</a></p></div></div></div></section>
-<section id="how"><div class="wrap"><div class="eyebrow">THE NEW ERA FINANCE MANAGER PLAYBOOK</div><h2 class="section-title">Learn. Practice. Apply.</h2><p class="section-sub">A practical resource for individual development and dealership team learning.</p><div class="steps">
-<div class="step"><div class="num">01</div><h3>Get the playbook</h3><p>Complete the $899 one-time purchase through Stripe, where you enter your name and email. The playbook is delivered by email after purchase; delivery is handled manually. For the lower-priced sales training bundle, see the starter offer above.</p></div>
-<div class="step"><div class="num">02</div><h3>Work through the material</h3><p>Study the fundamentals, use the exercises and test your understanding with knowledge checks.</p></div>
-<div class="step"><div class="num">03</div><h3>Bring it to your team</h3><p>Apply what you learn to customer conversations, sales-to-finance handoffs, documentation and professional habits.</p></div>
-</div></div></section>
-<section id="skills"><div class="wrap"><div class="eyebrow">Inside the training</div><h2 class="section-title">Skills for the showroom.<br>Habits for the finance office.</h2><div class="visual-topics"><article class="visual-topic"><div class="topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16v13H4zM8 7V4h8v3M4 12h16M10 12v3h4v-3"></path></svg></div><h3>Understand the deal</h3><p>Build your foundation in automotive finance, lender communication and funding.</p></article><article class="visual-topic"><div class="topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v12H4zM8 21l4-4 4 4M8 9h8M8 13h5"></path></svg></div><h3>Lead the conversation</h3><p>Practice needs analysis, clear product explanations and effective sales-to-finance handoffs.</p></article><article class="visual-topic"><div class="topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4h8v3H8zM8 5H5v16h14V5h-3M8 12l2 2 5-5M8 18h8"></path></svg></div><h3>Build better habits</h3><p>Bring documentation, organization, ethics and team accountability into daily work.</p></article></div></div></section>
-<section id="training">
-  <div class="wrap">
-    <div class="training-grid">
-      <div>
-        <span class="training-badge">FOUNDER'S EDITION</span>
-        <div class="eyebrow" style="margin-top:18px;">For finance managers, sales managers &amp; future leaders</div>
-        <h2 class="section-title">The New Era<br>Finance Manager</h2>
-        <p class="section-sub">A practical digital playbook for current finance and sales managers, as well as sales professionals preparing to step into F&amp;I. Strengthen your understanding of the deal, improve customer communication and build repeatable professional habits.</p>
-        <div class="curriculum">
-          <div class="module">Automotive finance fundamentals</div>
-          <div class="module">Lender communication &amp; funding</div>
-          <div class="module">Customer needs analysis</div>
-          <div class="module">F&amp;I product presentation</div>
-          <div class="module">Documentation &amp; organization</div>
-          <div class="module">Trust, ethics &amp; communication</div><div class="module">Sales-to-finance handoffs</div><div class="module">Coaching &amp; team accountability</div>
-          <div class="module">Real-world scenarios</div>
-          <div class="module">Field assignments &amp; knowledge checks</div>
-        </div>
-        <p class="fine">Built from 25 years of automotive industry experience.</p>
-      </div>
-      <div class="training-card"><div class="playbook-preview" role="img" aria-label="Illustrative digital playbook cover"><div class="book-cover"><img src="/brand-logo.svg" alt="" loading="lazy"><strong>THE NEW ERA<br>FINANCE<br>MANAGER</strong><span>FOUNDER’S EDITION<br>ASK THE FINANCE GUY</span></div><small>Illustrative playbook mockup</small></div>
-        <h3>Lead with knowledge. Work with confidence.</h3>
-        <p>Use it for self-study or as the core of a structured dealership development program.</p>
-        <ul>
-          <li>Founder's Edition digital playbook</li>
-          <li>Career development roadmap</li>
-          <li>Practical exercises and field assignments</li>
-          <li>Knowledge checks and reflection journal prompts</li>
-          <li>Completion framework and learning reflection</li>
-        </ul>
-        <div class="intro-label">INTRODUCTORY PRICE</div><div class="training-price">$899</div><p class="mono">ONE-TIME PURCHASE</p>
-        <p class="mono">FOUNDER'S EDITION</p>
-        <a class="btn btn-primary" href="#training-order" style="margin-top:20px;">Get the training</a>
-        <p class="fine">Professional education only. This is not a government license, academic degree, manufacturer credential, or industry-wide accreditation.</p>
-      </div>
-    </div>
-
-    <div id="training-order" class="training-order">
-      <div class="intro-label">ENROLL AT THE $899 INTRODUCTORY PRICE</div>
-      <h2 class="section-title">Get The New Era Finance Manager</h2>
-      <p class="section-sub">Continue to secure Stripe checkout to enter your name, email and payment details.</p>
-      <a id="training-submit" href="https://buy.stripe.com/7sY8wPd9U0tj13G0lrcEw03" class="btn btn-primary" style="width:100%;text-align:center;margin-top:20px;">Buy Founder's Edition — $899 introductory price</a>
-      <p class="submit-note" id="training-status">One-time purchase. Any applicable tax is shown at checkout. Training is delivered manually by email after payment.</p>
-    </div>
-  </div>
-</section>
-
-<section id="dealership-services"><div class="wrap"><div class="eyebrow">FOR DEALERSHIP OWNERS, GENERAL MANAGERS &amp; F&amp;I LEADERS</div><h2 class="section-title">Small mistakes.<br>Expensive consequences.</h2><p class="section-sub">Interim F&amp;I coverage and practical process coaching from Ask The Finance Guy. Discuss upcoming staffing gaps, funding bottlenecks and opportunities to strengthen your team's daily work.</p><div class="service-grid"><article class="service-card"><span class="service-num">01 · INTERIM F&amp;I COVERAGE</span><h3>Keep your finance office moving.</h3><p>Request coverage for planned vacations, short-term absences or a vacancy while you recruit. Initial inquiries are focused on the south Chicago suburbs and nearby Illinois dealerships.</p><ul style="padding-left:20px;margin:18px 0"><li>Scheduled day or short-term assignments</li><li>Scope, systems and responsibilities agreed before booking</li><li>Availability and dealership approval confirmed individually</li></ul><a class="btn btn-primary" href="#contact" data-service="Interim F&amp;I coverage" style="margin-top:auto;text-align:center">Request coverage availability</a></article><article class="service-card"><span class="service-num">02 · F&amp;I PROCESS REVIEWS &amp; COACHING</span><h3>Spot the gaps. Build better habits.</h3><p>Review your workflow, sales-to-finance handoff, funding follow-through and training needs. Receive practical priorities and coaching for the people doing the work.</p><ul style="padding-left:20px;margin:18px 0"><li>Initial discovery conversation</li><li>Agreed review scope and written priorities</li><li>Optional follow-up or ongoing coaching</li></ul><a class="btn btn-primary" href="#contact" data-service="F&amp;I process review and coaching" style="margin-top:auto;text-align:center">Discuss a process review</a></article></div><p class="fine">Services are quoted after an initial conversation. Coverage is subject to availability, agreed terms and appropriate dealership authorization. Process coaching is operational support; it is not a legal opinion, certified compliance audit or guarantee of regulatory compliance. Please do not send customer deal jackets or sensitive customer information through this website.</p></div></section>
+<section id="dealership-services"><div class="wrap"><div class="eyebrow">FOR DEALERSHIP OWNERS, GENERAL MANAGERS &amp; F&amp;I LEADERS</div><h2 class="section-title">Small mistakes.<br>Expensive consequences.</h2><p class="section-sub">Interim F&amp;I coverage and practical process coaching from Ask The Finance Guy. Discuss upcoming staffing gaps, funding bottlenecks and opportunities to strengthen your team's daily work.</p><div class="service-grid"><article class="service-card"><span class="service-num">01 · INTERIM F&amp;I COVERAGE</span><h3>Keep your finance office moving.</h3><p>Request coverage for planned vacations, short-term absences or a vacancy while you recruit. Initial inquiries are focused on the south Chicago suburbs and nearby Illinois dealerships.</p><ul style="padding-left:20px;margin:18px 0"><li>Scheduled day or short-term assignments</li><li>Scope, systems and responsibilities agreed before booking</li><li>Availability and dealership approval confirmed individually</li></ul><a class="btn btn-primary" href="#contact" data-service="Interim F&amp;I coverage" style="margin-top:auto;text-align:center">Request coverage availability</a></article><article class="service-card"><span class="service-num">02 · F&amp;I CONSULTING &amp; TEAM COACHING</span><h3>Spot the gaps. Build better habits.</h3><p>Review your workflow, sales-to-finance handoff, funding follow-through and training needs. Receive practical priorities and coaching for the people doing the work.</p><ul style="padding-left:20px;margin:18px 0"><li>Initial discovery conversation</li><li>Agreed review scope and written priorities</li><li>Optional follow-up or ongoing coaching</li></ul><a class="btn btn-primary" href="#contact" data-service="F&amp;I process review and coaching" style="margin-top:auto;text-align:center">Request a consultation</a></article></div><p class="fine">Services are quoted after an initial conversation. Coverage is subject to availability, agreed terms and appropriate dealership authorization. Process coaching is operational support; it is not a legal opinion, certified compliance audit or guarantee of regulatory compliance. Please do not send customer deal jackets or sensitive customer information through this website.</p></div></section>
 <section id="contact">
   <div class="wrap form-wrap">
     <div>
@@ -595,6 +556,64 @@ nav .nav-cta { background: rgb(226, 189, 107); color: rgb(8, 24, 44); border: 1p
   </div>
 </section>
 
+<section id="starter-bundle"><div class="wrap"><div class="eyebrow">YOUR FIRST STEP · TWO PRACTICAL PDF RESOURCES</div><h2 class="section-title">Train the habit.<br>Practice the conversation.</h2><div class="training-grid"><div><p class="section-sub">Give yourself—or your sales team—a clear development plan and a simple way to practice every day.</p><div class="visual-topics bundle-topics"><article class="visual-topic"><span class="training-badge">01 · COACHING MANUAL</span><h3 style="margin-top:18px">A plan for progress</h3><p>30/60/90-day development, customer conversations, printable progress forms and skill checks.</p></article><article class="visual-topic"><span class="training-badge">02 · OBJECTIONS 101</span><h3 style="margin-top:18px">Practice before the showroom</h3><p>Printable objection flashcards with questions, practice responses and next steps for partner role-play.</p></article></div></div><div class="training-card"><h3>Sales Training Starter Bundle</h3><p>Salesperson Training &amp; Coaching Manual + Automobile Sales Objection Flashcards.</p><div class="intro-label">LIMITED LAUNCH ALLOCATION</div><div class="training-price" id="bundle-price">From $19.99</div><p id="bundle-allocation">First 10 completed purchases at $19.99.</p><a class="btn btn-primary" id="bundle-buy" href="https://buy.stripe.com/5kQ14n6Lw4JzeUwd8dcEw04" data-track="bundle_checkout_click" style="display:block;text-align:center;margin-top:22px">Check launch offer on Stripe</a><p class="submit-note">One-time purchase. Both PDFs are delivered manually by email after payment. Not an instant download. Confirm the price at checkout.</p><p class="fine">Launch pricing: first 10 at $19.99, next 10 at $29.99, next 30 at $39.99, then $59.99 standard bundle pricing. Each allocation is limited in Stripe.</p><p class="fine"><a href="#contact">Ask about delivery, team use or refund terms before buying.</a></p></div></div></div></section>
+<section id="free-guide"><div class="wrap training-grid"><div><div class="eyebrow">FOR YOUR SALES TEAM · FREE SAMPLE</div><h2 class="section-title">Five objections.<br>Better next questions.</h2><p class="section-sub">A practical guide to “just looking,” “best price,” “payment too high,” “think about it” and “talk to my partner.” Learn to listen, clarify and agree on a useful next step.</p><p style="margin-top:20px"><a href="/free-sales-objections.html" data-track="sample_preview">Read the free sample now →</a></p></div><div class="form-card"><div id="signup-unavailable" hidden><h3 style="font-size:30px;margin-bottom:12px">Start practicing today</h3><p>Read five common objections, practical responses and better next questions with your team.</p><a class="btn btn-primary" href="/free-sales-objections.html" data-track="sample_preview" style="margin-top:20px">Read the free sample</a></div><div id="signup-content"><h3 style="font-size:30px;margin-bottom:12px">Keep learning with The Finance Guy</h3><p style="margin-bottom:20px">Get the sample link by email and join our free list for occasional training tips and product updates.</p><form id="subscribe-form"><div class="field"><label for="subscribe-email">YOUR EMAIL</label><input type="email" id="subscribe-email" name="email" required autocomplete="email" maxlength="254" placeholder="you@example.com"></div><div class="hp-field" aria-hidden="true"><label for="subscribe-website">Leave blank</label><input id="subscribe-website" name="website" tabindex="-1" autocomplete="off"></div><label class="consent"><input id="subscribe-consent" type="checkbox" required> Yes, send me automotive training tips and product updates. I can unsubscribe any time.</label><button class="btn btn-primary" id="subscribe-btn" type="submit" style="width:100%;margin-top:18px">Send my free sample link</button><p class="submit-note">Free email subscription. Confirm your email to join. <a href="/privacy.html">Privacy &amp; unsubscribe</a>.</p><div id="subscribe-status" class="form-status" role="status" aria-live="polite"></div></form></div></div></div></section>
+<section id="how"><div class="wrap"><div class="eyebrow">THE NEW ERA FINANCE MANAGER PLAYBOOK</div><h2 class="section-title">Learn. Practice. Apply.</h2><p class="section-sub">A practical resource for individual development and dealership team learning.</p><div class="steps">
+<div class="step"><div class="num">01</div><h3>Get the playbook</h3><p>Complete the $899 one-time purchase through Stripe, where you enter your name and email. The playbook is delivered by email after purchase; delivery is handled manually. For the lower-priced sales training bundle, see the starter offer above.</p></div>
+<div class="step"><div class="num">02</div><h3>Work through the material</h3><p>Study the fundamentals, use the exercises and test your understanding with knowledge checks.</p></div>
+<div class="step"><div class="num">03</div><h3>Bring it to your team</h3><p>Apply what you learn to customer conversations, sales-to-finance handoffs, documentation and professional habits.</p></div>
+</div></div></section>
+<section id="skills"><div class="wrap"><div class="eyebrow">Inside the training</div><h2 class="section-title">Skills for the showroom.<br>Habits for the finance office.</h2><div class="visual-topics"><article class="visual-topic"><div class="topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16v13H4zM8 7V4h8v3M4 12h16M10 12v3h4v-3"></path></svg></div><h3>Understand the deal</h3><p>Build your foundation in automotive finance, lender communication and funding.</p></article><article class="visual-topic"><div class="topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v12H4zM8 21l4-4 4 4M8 9h8M8 13h5"></path></svg></div><h3>Lead the conversation</h3><p>Practice needs analysis, clear product explanations and effective sales-to-finance handoffs.</p></article><article class="visual-topic"><div class="topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4h8v3H8zM8 5H5v16h14V5h-3M8 12l2 2 5-5M8 18h8"></path></svg></div><h3>Build better habits</h3><p>Bring documentation, organization, ethics and team accountability into daily work.</p></article></div></div></section>
+<section id="training">
+  <div class="wrap">
+    <div class="training-grid">
+      <div>
+        <span class="training-badge">FOUNDER'S EDITION</span>
+        <div class="eyebrow" style="margin-top:18px;">For finance managers, sales managers &amp; future leaders</div>
+        <h2 class="section-title">The New Era<br>Finance Manager</h2>
+        <p class="section-sub">A practical digital playbook for current finance and sales managers, as well as sales professionals preparing to step into F&amp;I. Strengthen your understanding of the deal, improve customer communication and build repeatable professional habits.</p>
+        <div class="curriculum">
+          <div class="module">Automotive finance fundamentals</div>
+          <div class="module">Lender communication &amp; funding</div>
+          <div class="module">Customer needs analysis</div>
+          <div class="module">F&amp;I product presentation</div>
+          <div class="module">Documentation &amp; organization</div>
+          <div class="module">Trust, ethics &amp; communication</div><div class="module">Sales-to-finance handoffs</div><div class="module">Coaching &amp; team accountability</div>
+          <div class="module">Real-world scenarios</div>
+          <div class="module">Field assignments &amp; knowledge checks</div>
+        </div>
+        <p class="fine">Built from 25 years of automotive industry experience.</p>
+      </div>
+      <div class="training-card"><div class="playbook-preview" role="img" aria-label="Illustrative digital playbook cover"><div class="book-cover"><img src="/brand-logo.svg" alt="" loading="lazy"><strong>THE NEW ERA<br>FINANCE<br>MANAGER</strong><span>FOUNDER’S EDITION<br>ASK THE FINANCE GUY</span></div><small>Illustrative playbook mockup</small></div>
+        <h3>Lead with knowledge. Work with confidence.</h3>
+        <p>Use it for self-study or as the core of a structured dealership development program.</p>
+        <ul>
+          <li>Founder's Edition digital playbook</li>
+          <li>Career development roadmap</li>
+          <li>Practical exercises and field assignments</li>
+          <li>Knowledge checks and reflection journal prompts</li>
+          <li>Completion framework and learning reflection</li>
+        </ul>
+        <div class="intro-label">INTRODUCTORY PRICE</div><div class="training-price">$899</div><p class="mono">ONE-TIME PURCHASE</p>
+        <p class="mono">FOUNDER'S EDITION</p>
+        <a class="btn btn-primary" href="#training-order" style="margin-top:20px;">Get the training</a>
+        <p class="fine">Professional education only. This is not a government license, academic degree, manufacturer credential, or industry-wide accreditation.</p>
+      </div>
+    </div>
+
+    <div id="training-order" class="training-order">
+      <div class="intro-label">ENROLL AT THE $899 INTRODUCTORY PRICE</div>
+      <h2 class="section-title">Get The New Era Finance Manager</h2>
+      <p class="section-sub">Continue to secure Stripe checkout to enter your name, email and payment details.</p>
+      <a id="training-submit" href="https://buy.stripe.com/7sY8wPd9U0tj13G0lrcEw03" class="btn btn-primary" style="width:100%;text-align:center;margin-top:20px;">Buy Founder's Edition — $899 introductory price</a>
+      <p class="submit-note" id="training-status">One-time purchase. Any applicable tax is shown at checkout. Training is delivered manually by email after payment.</p>
+    </div>
+  </div>
+</section>
+
+
+
+
 <section id="faq"><div class="wrap"><div class="eyebrow">FAQ</div><h2 class="section-title">Before you enroll.</h2>
 <div class="faq-item"><h3>Who is the training for?</h3><p>Finance managers, sales managers and automotive sales professionals preparing for a management or F&amp;I role. Dealership leaders can also use the material to guide team development.</p></div>
 <div class="faq-item"><h3>What am I buying?</h3><p>The New Era Finance Manager Founder’s Edition digital playbook at the introductory price of $899, paid once. It includes practical exercises, field assignments, real-world scenarios and knowledge checks.</p></div>
@@ -612,6 +631,12 @@ nav .nav-cta { background: rgb(226, 189, 107); color: rgb(8, 24, 44); border: 1p
 
 
 <script>
+const menuButton = document.querySelector('.menu-toggle');
+const mainNav = document.getElementById('main-nav');
+function closeMenu() { mainNav.classList.remove('is-open'); menuButton.setAttribute('aria-expanded', 'false'); }
+menuButton.addEventListener('click', () => { const open = mainNav.classList.toggle('is-open'); menuButton.setAttribute('aria-expanded', String(open)); });
+mainNav.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+document.addEventListener('keydown', event => { if (event.key === 'Escape' && mainNav.classList.contains('is-open')) { closeMenu(); menuButton.focus(); } });
 const contactForm = document.getElementById('contact-form');
 contactForm.addEventListener('submit', async (event) => {
   event.preventDefault();
@@ -652,7 +677,8 @@ signup.addEventListener('submit', async event => {
  catch(error) { status.textContent = error.message; status.className = 'form-status error'; }
  finally { button.disabled = false; }
 });
-fetch('/api/subscribe?action=status').then(r=>r.json()).then(result=>{if(!result.available){document.getElementById('subscribe-btn').disabled=true;const status=document.getElementById('subscribe-status');status.textContent='Email sign-up is temporarily unavailable. You can still read the free sample using the link beside this form.';status.className='form-status error';}}).catch(()=>{});
+function showSampleFallback() { document.getElementById('signup-content').hidden = true; document.getElementById('signup-unavailable').hidden = false; }
+fetch('/api/subscribe?action=status').then(r=>{if(!r.ok)throw new Error('Unavailable');return r.json();}).then(result=>{if(!result.available)showSampleFallback();}).catch(showSampleFallback);
 fetch('/api/bundle-offer').then(async r=>{if(!r.ok)return;const offer=await r.json();document.getElementById('bundle-price').textContent=new Intl.NumberFormat('en-US',{style:'currency',currency:'USD'}).format(offer.amount/100);document.getElementById('bundle-allocation').textContent=offer.remaining===null?'Standard bundle price.':offer.remaining+' purchases remain in this launch allocation.';const buy=document.getElementById('bundle-buy');buy.href='/api/bundle-offer?checkout=1';buy.textContent='Get both PDF resources';}).catch(()=>{});
 </script></body></html>
 
