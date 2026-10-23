@@ -1,5 +1,39 @@
 # Ask The Finance Guy — setup guide
 
+## October 2026 growth update
+
+The homepage now leads with a free five-objection sample and the Sales Training
+Starter Bundle. Existing Stripe Payment Links enforce launch allocations:
+10 at $19.99, 10 at $29.99, 30 at $39.99, then $59.99. `/api/bundle-offer`
+checks live availability and price before selecting checkout. It requires the
+existing live `STRIPE_SECRET_KEY` with payment-link read access. If unavailable,
+the page retains the existing Stripe-capped first-allocation link and asks the
+customer to confirm pricing in checkout; it does not claim a current count.
+
+`/api/subscribe` uses `RESEND_API_KEY` and `FROM_EMAIL`. The key must support
+Contacts read/create/update and sending email. `NEWSLETTER_SIGNING_SECRET` is
+optional; otherwise the existing Resend key signs confirmation links. Rotating
+the signing key invalidates old links. Sign-up is disabled if the service is
+not ready, and the sample remains freely readable. No emails are added to the
+list until a signed link is explicitly confirmed by POST. Unsubscribe updates
+the provider's global subscription state. Confirmation links expire after
+approximately two days. Do not log full URLs or forward confirmation links.
+
+Future newsletters are not scheduled automatically. Use Resend Broadcasts,
+honor unsubscribes, include the provider unsubscribe link and an accurate
+business mailing address, and send only to confirmed contacts. The draft
+outreach plan and tracked social links are in `marketing/launch-plan.md`.
+
+The $899 finance-manager playbook remains available. All paid PDFs are still
+delivered manually by email; this update does not claim instant fulfillment.
+The order webhook now gates delivery notices on paid sessions, handles delayed
+payment success, identifies the starter resources and uses an idempotency key.
+Verify Stripe's webhook endpoint is `/api/webhook` and subscribes to both
+`checkout.session.completed` and `checkout.session.async_payment_succeeded`.
+
+The older setup examples below describe the original question/session service.
+They do not define the current homepage or starter-bundle prices.
+
 This is a static site (`index.html`) plus three small serverless functions.
 `/api/create-checkout.js` and `/api/webhook.js` handle real payments and email
 you when someone pays, while `/api/contact.js` delivers general inquiries.
@@ -83,3 +117,4 @@ Create a new repo and push the contents of this folder (including the
   early. The email only fires once Stripe confirms the charge.
 - All card data is handled by Stripe's hosted checkout page; it never touches
   your server.
+
